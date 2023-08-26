@@ -1,4 +1,54 @@
 .safe {
   width: 1920px;
   height: 1080px;
+  background: url(./images/back.png) no-repeat center top;
+}
+
+.safe .topperback {
+  background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
+  height: 320px;
+}
+
+.safe .topperback .top {
+  background: url(./images/titleback.png) no-repeat center top;
+  height: 73px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.safe .topperback .top .topleft {
+  padding-top: 19px;
+  padding-left: 16px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+  color: #ffffff;
+}
+
+.safe .topperback .top .topleft .datetime .date {
+  font-size: 14px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.safe .topperback .top .topleft .datetime .time {
+  font-size: 20px;
+  font-weight: 600;
+  text-align: left;
+}
+
+.safe .topperback .top .topleft .weather {
+  display: flex;
+}
+
+.safe .topperback .top .topleft .weather img {
+  width: 100%;
+  height: auto;
 }

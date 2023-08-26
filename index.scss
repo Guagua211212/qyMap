@@ -1,4 +1,49 @@
 .safe {
   width: 1920px;
   height: 1080px;
+  background: url(./images/back.png) no-repeat center top;
+  .topperback {
+    background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
+    height: 320px;
+    .top {
+      background: url(./images/titleback.png) no-repeat center top;
+      height: 73px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center;
+      justify-content: space-between;
+      align-items: center;
+      .topleft {
+        padding-top: 19px;
+        padding-left: 16px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: center;
+        align-items: flex-start;
+        color: #ffffff;
+        .datetime {
+          .date {
+            font-size: 14px;
+            font-weight: 600;
+            text-align: left;
+          }
+          .time {
+            font-size: 20px;
+            font-weight: 600;
+            text-align: left;
+          }
+        }
+        .weather {
+          display: flex;
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
 }
