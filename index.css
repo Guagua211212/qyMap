@@ -2,11 +2,13 @@
   width: 1920px;
   height: 1080px;
   background: url(./images/back.png) no-repeat center top;
+  position: relative;
 }
 
 .safe .topperback {
   background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
   height: 320px;
+  width: 1920px;
 }
 
 .safe .topperback .topbarcolor {
@@ -16,6 +18,7 @@
 .safe .topperback .top {
   background: url(./images/titleback.png) no-repeat center top;
   height: 73px;
+  margin-bottom: 4px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -114,4 +117,131 @@
 .safe .topperback .top .centerright .userimg img {
   padding-left: 7px;
   padding-top: 6px;
+}
+
+.safe .bottomback {
+  background: linear-gradient(0deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
+  height: 320px;
+  width: 1920px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+
+.safe .leftpart {
+  position: absolute;
+  left: 0px;
+  top: 73px;
+  width: 400px;
+  height: 1007px;
+  background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
+  backdrop-filter: blur(2.5px);
+}
+
+.safe .leftpart .leftpartcon1 {
+  height: 324px;
+}
+
+.safe .leftpart .leftpartcon2 {
+  height: 330px;
+}
+
+.safe .leftpart .leftpartcon3 {
+  height: 353px;
+}
+
+.safe .rightpart {
+  position: absolute;
+  right: 0px;
+  top: 73px;
+  width: 400px;
+  height: 1007px;
+  background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
+  backdrop-filter: blur(2.5px);
+}
+
+.safe .rightpart .rightpartcon1 {
+  height: 361px;
+}
+
+.safe .rightpart .rightpartcon2 {
+  height: 280px;
+}
+
+.safe .rightpart .rightpartcon3 {
+  height: 366px;
+}
+
+.safe .partconten .contitle {
+  width: 397px;
+  height: 40px;
+  background: linear-gradient(90deg, #11618d 0%, rgba(9, 33, 77, 0) 100%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.safe .partconten .contitle .contitblock {
+  width: 12px;
+  height: 40px;
+  background: #239cdf;
+}
+
+.safe .partconten .contitle .contittext {
+  color: #fff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2.4px;
+  padding-left: 12px;
+}
+
+.safe .centerpart {
+  width: 516px;
+  height: 105px;
+  border-radius: 12px;
+  background: rgba(7, 23, 68, 0.6);
+  position: absolute;
+  left: 702px;
+  top: 97px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.safe .centerpart .centercon {
+  width: 50%;
+  padding-left: 30px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.safe .centerpart .centercon .centercontext {
+  padding-left: 26px;
+}
+
+.safe .centerpart .centercon .centercontext .cencontext1 {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 1.4px;
+}
+
+.safe .centerpart .centercon .centercontext .cencontext2 {
+  color: #34ceff;
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 2.4px;
+  padding-top: 7px;
 }
