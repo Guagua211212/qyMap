@@ -9,6 +9,10 @@
   height: 320px;
 }
 
+.safe .topperback .topbarcolor {
+  background: #071744;
+}
+
 .safe .topperback .top {
   background: url(./images/titleback.png) no-repeat center top;
   height: 73px;
@@ -22,14 +26,18 @@
 
 .safe .topperback .top .topleft {
   padding-top: 19px;
-  padding-left: 16px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: flex-start;
   color: #ffffff;
+  width: 33%;
+}
+
+.safe .topperback .top .topleft .datetime {
+  padding-left: 16px;
 }
 
 .safe .topperback .top .topleft .datetime .date {
@@ -46,9 +54,64 @@
 
 .safe .topperback .top .topleft .weather {
   display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
-.safe .topperback .top .topleft .weather img {
-  width: 100%;
-  height: auto;
+.safe .topperback .top .topleft .weather .weatherimg {
+  width: 26px;
+  height: 26px;
+  padding-left: 60px;
+}
+
+.safe .topperback .top .topleft .weather .weathertext {
+  padding-left: 8px;
+}
+
+.safe .topperback .top .topcenter {
+  font-size: 34px;
+  font-weight: 600;
+  letter-spacing: 3.4px;
+  background: linear-gradient(180deg, #d9e3eb 0%, #72befb 100%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  width: 34%;
+  text-align: center;
+}
+
+.safe .topperback .top .centerright {
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: nowrap;
+  align-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 33%;
+}
+
+.safe .topperback .top .centerright .userlogout {
+  padding-right: 14px;
+}
+
+.safe .topperback .top .centerright .usertext {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  padding-right: 21px;
+}
+
+.safe .topperback .top .centerright .userimg {
+  width: 32px;
+  height: 32px;
+  border-radius: 2px;
+  background: #193073;
+  margin-right: 8px;
+}
+
+.safe .topperback .top .centerright .userimg img {
+  padding-left: 7px;
+  padding-top: 6px;
 }

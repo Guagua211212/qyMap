@@ -5,6 +5,9 @@
   .topperback {
     background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
     height: 320px;
+    .topbarcolor {
+      background: #071744;
+    }
     .top {
       background: url(./images/titleback.png) no-repeat center top;
       height: 73px;
@@ -16,15 +19,16 @@
       align-items: center;
       .topleft {
         padding-top: 19px;
-        padding-left: 16px;
         display: flex;
         flex-direction: row;
         flex-wrap: nowrap;
         align-content: center;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: flex-start;
         color: #ffffff;
+        width: 33%;
         .datetime {
+          padding-left: 16px;
           .date {
             font-size: 14px;
             font-weight: 600;
@@ -38,9 +42,57 @@
         }
         .weather {
           display: flex;
+          flex-direction: row;
+          flex-wrap: nowrap;
+          justify-content: flex-start;
+          align-items: flex-start;
+          .weatherimg {
+            width: 26px;
+            height: 26px;
+            padding-left: 60px;
+          }
+          .weathertext {
+            padding-left: 8px;
+          }
+        }
+      }
+      .topcenter {
+        font-size: 34px;
+        font-weight: 600;
+        letter-spacing: 3.4px;
+        background: linear-gradient(180deg, #d9e3eb 0%, #72befb 100%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        width: 34%;
+        text-align: center;
+      }
+      .centerright {
+        display: flex;
+        flex-direction: row-reverse;
+        flex-wrap: nowrap;
+        align-content: center;
+        justify-content: flex-start;
+        align-items: center;
+        width: 33%;
+        .userlogout {
+          padding-right: 14px;
+        }
+        .usertext {
+          color: #fff;
+          font-size: 12px;
+          font-weight: 400;
+          padding-right: 21px;
+        }
+        .userimg {
+          width: 32px;
+          height: 32px;
+          border-radius: 2px;
+          background: #193073;
+          margin-right: 8px;
           img {
-            width: 100%;
-            height: auto;
+            padding-left: 7px;
+            padding-top: 6px;
           }
         }
       }
