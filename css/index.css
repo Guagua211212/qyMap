@@ -1,3 +1,4 @@
+@charset "UTF-8";
 html {
   font-family: PingFang SC;
 }
@@ -7,6 +8,8 @@ html {
   height: 1080px;
   background: url(../images/back.png) no-repeat center top;
   position: relative;
+  overflow: hidden;
+  margin: 0 auto;
 }
 
 .safe .topperback {
@@ -518,6 +521,7 @@ html {
   height: 1007px;
   background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
   backdrop-filter: blur(2.5px);
+  transition: all 0.2s;
 }
 
 .safe .rightpart .rightpartcon1 {
@@ -852,9 +856,59 @@ html {
   padding-left: 4px;
 }
 
-.safe .rightpart .rightpartcon3 .condetail .tablecon {
+.safe .rightpart .rightpartcon3 .condetail .r1 {
+  border-radius: 4px;
+  background: linear-gradient(91deg, #013a87 0%, #015280 100%);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1.2px;
+  padding-top: 2px;
+  padding-bottom: 5px;
   margin-top: 8px;
   margin-left: 12px;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .row {
+  width: 379px;
+  display: flex;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .row .c1 {
+  width: 127px;
+  padding-left: 8px;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .row .c2 {
+  width: 63px;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .tablecon {
+  margin-left: 12px;
+  height: 102px;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .tablecon::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 5px;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .tablecon::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px #239cdf;
+  background: #535353;
+}
+
+.safe .rightpart .rightpartcon3 .condetail .tablecon::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px #239cdf;
+  border-radius: 10px;
+  background: #ededed;
 }
 
 .safe .rightpart .rightpartcon3 .condetail .tablecon .row {
@@ -871,17 +925,6 @@ html {
   width: 63px;
 }
 
-.safe .rightpart .rightpartcon3 .condetail .tablecon .r1 {
-  border-radius: 4px;
-  background: linear-gradient(91deg, #013a87 0%, #015280 100%);
-  color: rgba(255, 255, 255, 0.5);
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1.2px;
-  padding-top: 2px;
-  padding-bottom: 5px;
-}
-
 .safe .rightpart .rightpartcon3 .condetail .tablecon .r2 {
   color: #fff;
   font-size: 12px;
@@ -889,26 +932,14 @@ html {
   letter-spacing: 1.2px;
   padding-top: 10px;
   padding-bottom: 13px;
+  width: 379px;
 }
 
-.safe .rightpart .rightpartcon3 .condetail .tablecon .r3 {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1.2px;
-  padding-top: 2px;
-  padding-bottom: 5px;
-  width: 379px;
+.safe .rightpart .rightpartcon3 .condetail .tablecon .r2:nth-of-type(even) {
   border-radius: 4px;
   background: #014285;
-}
-
-.safe .rightpart .rightpartcon3 .condetail .tablecon .r4 {
-  color: #fff;
-  font-size: 12px;
-  font-weight: 400;
-  letter-spacing: 1.2px;
-  padding-top: 10px;
+  padding-top: 2px;
+  padding-bottom: 5px;
 }
 
 .safe .rightpart .rightclosebutton {

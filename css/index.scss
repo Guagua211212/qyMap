@@ -7,6 +7,8 @@ html {
   height: 1080px;
   background: url(../images/back.png) no-repeat center top;
   position: relative;
+  overflow: hidden;
+  margin: 0 auto;
   .topperback {
     background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
     height: 320px;
@@ -459,6 +461,7 @@ html {
     background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%),
       linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
     backdrop-filter: blur(2.5px);
+    transition: all 0.2s;
     .rightpartcon1 {
       height: 361px;
       .contitle {
@@ -754,9 +757,52 @@ html {
             padding-left: 4px;
           }
         }
-        .tablecon {
+        .r1 {
+          border-radius: 4px;
+          background: linear-gradient(91deg, #013a87 0%, #015280 100%);
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 1.2px;
+          padding-top: 2px;
+          padding-bottom: 5px;
           margin-top: 8px;
           margin-left: 12px;
+        }
+        .row {
+          width: 379px;
+          display: flex;
+          .c1 {
+            width: 127px;
+            padding-left: 8px;
+          }
+          .c2 {
+            width: 63px;
+          }
+        }
+        .tablecon {
+          // margin-top: 8px;
+          margin-left: 12px;
+          height: 102px;
+          overflow-y: auto;
+          overflow-x: hidden;
+          &::-webkit-scrollbar {
+            /*滚动条整体样式*/
+            width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+            height: 5px;
+          }
+          &::-webkit-scrollbar-thumb {
+            /*滚动条里面小方块*/
+            border-radius: 10px;
+            -webkit-box-shadow: inset 0 0 5px #239cdf;
+            background: #535353;
+          }
+          &::-webkit-scrollbar-track {
+            /*滚动条里面轨道*/
+            -webkit-box-shadow: inset 0 0 5px #239cdf;
+            border-radius: 10px;
+            background: #ededed;
+          }
           .row {
             width: 379px;
             display: flex;
@@ -768,16 +814,16 @@ html {
               width: 63px;
             }
           }
-          .r1 {
-            border-radius: 4px;
-            background: linear-gradient(91deg, #013a87 0%, #015280 100%);
-            color: rgba(255, 255, 255, 0.5);
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            padding-top: 2px;
-            padding-bottom: 5px;
-          }
+          // .r1 {
+          //   border-radius: 4px;
+          //   background: linear-gradient(91deg, #013a87 0%, #015280 100%);
+          //   color: rgba(255, 255, 255, 0.5);
+          //   font-size: 12px;
+          //   font-weight: 400;
+          //   letter-spacing: 1.2px;
+          //   padding-top: 2px;
+          //   padding-bottom: 5px;
+          // }
           .r2 {
             color: #fff;
             font-size: 12px;
@@ -785,25 +831,35 @@ html {
             letter-spacing: 1.2px;
             padding-top: 10px;
             padding-bottom: 13px;
-          }
-          .r3 {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            padding-top: 2px;
-            padding-bottom: 5px;
             width: 379px;
-            border-radius: 4px;
-            background: #014285;
+            // &:nth-of-type(odd){
+            //   奇数行
+            // } ;
+            &:nth-of-type(even) {
+              border-radius: 4px;
+              background: #014285;
+              padding-top: 2px;
+              padding-bottom: 5px;
+            }
           }
-          .r4 {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 400;
-            letter-spacing: 1.2px;
-            padding-top: 10px;
-          }
+          // .r3 {
+          //   color: #fff;
+          //   font-size: 12px;
+          //   font-weight: 400;
+          //   letter-spacing: 1.2px;
+          //   padding-top: 2px;
+          //   padding-bottom: 5px;
+          //   width: 379px;
+          //   border-radius: 4px;
+          //   background: #014285;
+          // }
+          // .r4 {
+          //   color: #fff;
+          //   font-size: 12px;
+          //   font-weight: 400;
+          //   letter-spacing: 1.2px;
+          //   padding-top: 10px;
+          // }
         }
       }
     }
