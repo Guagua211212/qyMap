@@ -1,3 +1,7 @@
+html {
+  font-family: PingFang SC;
+}
+
 .safe {
   width: 1920px;
   height: 1080px;
@@ -85,7 +89,7 @@
   text-align: center;
 }
 
-.safe .topperback .top .centerright {
+.safe .topperback .top .topright {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
@@ -95,18 +99,19 @@
   width: 33%;
 }
 
-.safe .topperback .top .centerright .userlogout {
+.safe .topperback .top .topright .userlogout {
   padding-right: 14px;
+  cursor: pointer;
 }
 
-.safe .topperback .top .centerright .usertext {
+.safe .topperback .top .topright .usertext {
   color: #fff;
   font-size: 12px;
   font-weight: 400;
   padding-right: 21px;
 }
 
-.safe .topperback .top .centerright .userimg {
+.safe .topperback .top .topright .userimg {
   width: 32px;
   height: 32px;
   border-radius: 2px;
@@ -114,7 +119,7 @@
   margin-right: 8px;
 }
 
-.safe .topperback .top .centerright .userimg img {
+.safe .topperback .top .topright .userimg img {
   padding-left: 7px;
   padding-top: 6px;
 }
@@ -151,6 +156,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .safe .bottomback .bottomconten .bottomconitemtext {
@@ -389,6 +395,7 @@
   font-weight: 500;
   letter-spacing: 1.4px;
   padding-right: 4px;
+  cursor: pointer;
 }
 
 .safe .leftpart .leftpartcon3 .contitle .leftpart3switchbutton img {
@@ -486,6 +493,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .safe .leftclosed {
@@ -508,7 +516,7 @@
   top: 73px;
   width: 400px;
   height: 1007px;
-  background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #708ce0 0%, rgba(0, 26, 102, 0.5) 100%);
+  background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
   backdrop-filter: blur(2.5px);
 }
 
@@ -537,6 +545,7 @@
   padding-bottom: 4px;
   background: transparent;
   outline: none;
+  cursor: pointer;
 }
 
 .safe .rightpart .rightpartcon1 .contitle .contitright .contitrb option {
@@ -555,6 +564,7 @@
 .safe .rightpart .rightpartcon1 .contitle .contitright .showmap img {
   margin-bottom: -7px;
   margin-right: 14px;
+  cursor: pointer;
 }
 
 .safe .rightpart .rightpartcon1 .condetail {
@@ -697,12 +707,19 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  padding: 0 12px;
 }
 
 .safe .rightpart .rightpartcon2 .condetail .condets .condetitem {
   width: 96px;
   height: 96px;
   padding-left: 12px;
+  cursor: pointer;
+}
+
+.safe .rightpart .rightpartcon2 .condetail .condets .condetitem:hover {
+  border-radius: 4px;
+  background: rgba(17, 93, 137, 0.6);
 }
 
 .safe .rightpart .rightpartcon2 .condetail .condets .condetitem .itemimg {
@@ -907,6 +924,7 @@
   align-content: center;
   justify-content: center;
   align-items: center;
+  cursor: pointer;
 }
 
 .safe .rightclosed {
