@@ -1,18 +1,33 @@
 html {
   font-family: PingFang SC;
+  width: 100%;
+  height: 100%;
 }
 
+body {
+  // position: relative;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
 .safe {
-  width: 1920px;
-  height: 1080px;
+  // width: 1920px;
+  // height: 1080px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: url(../images/back.png) no-repeat center top;
-  position: relative;
+  background-size: 100% 100%;
+  // position: relative;
   overflow: hidden;
   margin: 0 auto;
   .topperback {
     background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
     height: 320px;
-    width: 1920px;
+    width: 100%;
+    z-index: 1000000;
     .topbarcolor {
       background: #071744;
     }
@@ -111,7 +126,7 @@ html {
   .bottomback {
     background: linear-gradient(0deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
     height: 320px;
-    width: 1920px;
+    width: 100%;
     position: absolute;
     bottom: 0;
     display: flex;
@@ -167,12 +182,33 @@ html {
     position: absolute;
     left: 0px;
     top: 73px;
+
     width: 400px;
-    height: 1007px;
+    height: calc(100vh - 73px);
+    overflow-y: auto;
+    overflow-x: hidden;
     background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%),
       linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
     backdrop-filter: blur(2.5px);
+
     transition: all 0.2s;
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 5px #239cdf;
+      background: #535353;
+    }
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px #239cdf;
+      border-radius: 10px;
+      background: #ededed;
+    }
     .leftpartcon1 {
       height: 324px;
       .condetail {
@@ -325,7 +361,7 @@ html {
       }
     }
     .leftpartcon3 {
-      height: 353px;
+      // height: 353px;
       .contitle {
         position: relative;
         .leftpart3switchbutton {
@@ -424,32 +460,36 @@ html {
         }
       }
     }
-    .leftclosebutton {
-      position: absolute;
-      left: 400px;
-      top: 464px;
-      width: 14px;
-      height: 80px;
-      background: url(../images/leftpartbuttonback.png);
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
+  }
+  .leftclosebutton {
+    position: absolute;
+    left: 400px;
+    top: 49%;
+    width: 14px;
+    height: 80px;
+    background: url(../images/leftpartbuttonback.png);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
   }
   .leftclosed {
     position: absolute;
     left: -400px;
     transition: all 0.2s;
-    .leftclosebutton {
-      img {
-        transform: rotate(180deg);
-        -ms-transform: rotate(180deg); /* IE 9 */
-        -webkit-transform: rotate(180deg); /* Safari and Chrome */
-      }
+  }
+  .leftclosebuttonhidden {
+    position: absolute;
+    left: 0px;
+    transition: all 0.2s;
+    img {
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg); /* IE 9 */
+      -webkit-transform: rotate(180deg); /* Safari and Chrome */
     }
   }
   .rightpart {
@@ -457,11 +497,31 @@ html {
     right: 0px;
     top: 73px;
     width: 400px;
-    height: 1007px;
-    background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%),
+    height: calc(100vh - 73px);
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: linear-gradient(90deg, rgba(7, 23, 68, 0) 0%, #071744 100%),
       linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
     backdrop-filter: blur(2.5px);
+
     transition: all 0.2s;
+    &::-webkit-scrollbar {
+      /*滚动条整体样式*/
+      width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+      height: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+      /*滚动条里面小方块*/
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 5px #239cdf;
+      background: #535353;
+    }
+    &::-webkit-scrollbar-track {
+      /*滚动条里面轨道*/
+      -webkit-box-shadow: inset 0 0 5px #239cdf;
+      border-radius: 10px;
+      background: #ededed;
+    }
     .rightpartcon1 {
       height: 361px;
       .contitle {
@@ -571,6 +631,7 @@ html {
           align-content: center;
           justify-content: flex-start;
           align-items: center;
+          cursor: pointer;
           .iteminfo {
             margin-left: 12px;
           }
@@ -612,6 +673,13 @@ html {
                 color: #ff3d00;
               }
             }
+          }
+          &:hover {
+            background: linear-gradient(
+              89deg,
+              #1c8dcb 1.1%,
+              rgba(22, 67, 149, 0) 99.27%
+            );
           }
         }
       }
@@ -660,7 +728,7 @@ html {
       }
     }
     .rightpartcon3 {
-      height: 366px;
+      // height: 366px;
       .condetail {
         .condets {
           padding-top: 18px;
@@ -783,26 +851,26 @@ html {
         .tablecon {
           // margin-top: 8px;
           margin-left: 12px;
-          height: 102px;
-          overflow-y: auto;
-          overflow-x: hidden;
-          &::-webkit-scrollbar {
-            /*滚动条整体样式*/
-            width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
-            height: 5px;
-          }
-          &::-webkit-scrollbar-thumb {
-            /*滚动条里面小方块*/
-            border-radius: 10px;
-            -webkit-box-shadow: inset 0 0 5px #239cdf;
-            background: #535353;
-          }
-          &::-webkit-scrollbar-track {
-            /*滚动条里面轨道*/
-            -webkit-box-shadow: inset 0 0 5px #239cdf;
-            border-radius: 10px;
-            background: #ededed;
-          }
+          // height: 102px;
+          // overflow-y: auto;
+          // overflow-x: hidden;
+          // &::-webkit-scrollbar {
+          //   /*滚动条整体样式*/
+          //   width: 4px; /*高宽分别对应横竖滚动条的尺寸*/
+          //   height: 5px;
+          // }
+          // &::-webkit-scrollbar-thumb {
+          //   /*滚动条里面小方块*/
+          //   border-radius: 10px;
+          //   -webkit-box-shadow: inset 0 0 5px #239cdf;
+          //   background: #535353;
+          // }
+          // &::-webkit-scrollbar-track {
+          //   /*滚动条里面轨道*/
+          //   -webkit-box-shadow: inset 0 0 5px #239cdf;
+          //   border-radius: 10px;
+          //   background: #ededed;
+          // }
           .row {
             width: 379px;
             display: flex;
@@ -863,32 +931,36 @@ html {
         }
       }
     }
-    .rightclosebutton {
-      position: absolute;
-      right: 400px;
-      top: 464px;
-      width: 14px;
-      height: 80px;
-      background: url(../images/rightbuttonback.png);
-      display: flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      align-content: center;
-      justify-content: center;
-      align-items: center;
-      cursor: pointer;
-    }
+  }
+  .rightclosebutton {
+    position: absolute;
+    right: 400px;
+    top: 49%;
+    width: 14px;
+    height: 80px;
+    background: url(../images/rightbuttonback.png);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
   }
   .rightclosed {
     position: absolute;
     right: -400px;
     transition: all 0.2s;
-    .rightclosebutton {
-      img {
-        transform: rotate(180deg);
-        -ms-transform: rotate(180deg); /* IE 9 */
-        -webkit-transform: rotate(180deg); /* Safari and Chrome */
-      }
+  }
+  .rightclosebuttonhidden {
+    position: absolute;
+    right: 0;
+    transition: all 0.2s;
+    img {
+      transform: rotate(180deg);
+      -ms-transform: rotate(180deg); /* IE 9 */
+      -webkit-transform: rotate(180deg); /* Safari and Chrome */
     }
   }
   .partconten {
@@ -922,14 +994,16 @@ html {
     border-radius: 12px;
     background: rgba(7, 23, 68, 0.6);
     position: absolute;
-    left: 702px;
+    left: 50%;
     top: 97px;
+    margin-left: -258px;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
     align-content: center;
     justify-content: center;
     align-items: center;
+    z-index: 10;
     .centercon {
       width: 50%;
       padding-left: 30px;

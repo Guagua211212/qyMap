@@ -54,7 +54,9 @@
         </div>
       </div>
       <div class="bottomback">
-        <div class="bottomimg"><img src="./images/downback.png" alt="" /></div>
+        <div class="bottomimg">
+          <img src="./images/downback.png" alt="" />
+        </div>
         <div class="bottomconten">
           <div class="botconitem1">
             <div class="bottomconitem">
@@ -268,12 +270,29 @@
               <div class="video"><img src="./images/video.png" alt="" /></div>
               <div class="video"><img src="./images/video.png" alt="" /></div>
             </div>
+            <!-- <div class="videocon">
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+            </div>
+            <div class="videocon">
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+            </div>
+            <div class="videocon">
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+            </div>
+            <div class="videocon">
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+              <div class="video"><img src="./images/video.png" alt="" /></div>
+            </div> -->
           </div>
         </div>
-        <div class="leftclosebutton">
-          <img src="./images/leftclose.png" alt="" />
-        </div>
       </div>
+      <div class="leftclosebutton">
+        <img src="./images/leftclose.png" alt="" />
+      </div>
+
       <div class="centerpart">
         <div class="centercon">
           <div class="centerconimg">
@@ -552,6 +571,20 @@
                 <div class="c2">处理中</div>
                 <div class="c2">预计2h</div>
               </div>
+              <!-- <div class="r2 row">
+                <div class="c1">建设路雨水管网1#</div>
+                <div class="c2">管网逆流</div>
+                <div class="c2">李四</div>
+                <div class="c2">处理中</div>
+                <div class="c2">预计2h</div>
+              </div>
+              <div class="r2 row">
+                <div class="c1">建设路雨水管网1#</div>
+                <div class="c2">管网逆流</div>
+                <div class="c2">李四</div>
+                <div class="c2">处理中</div>
+                <div class="c2">预计2h</div>
+              </div>
               <div class="r2 row">
                 <div class="c1">建设路雨水管网1#</div>
                 <div class="c2">管网逆流</div>
@@ -566,31 +599,63 @@
                 <div class="c2">处理中</div>
                 <div class="c2">预计2h</div>
               </div>
+              <div class="r2 row">
+                <div class="c1">建设路雨水管网1#</div>
+                <div class="c2">管网逆流</div>
+                <div class="c2">李四</div>
+                <div class="c2">处理中</div>
+                <div class="c2">预计2h</div>
+              </div>
+              <div class="r2 row">
+                <div class="c1">建设路雨水管网1#</div>
+                <div class="c2">管网逆流</div>
+                <div class="c2">李四</div>
+                <div class="c2">处理中</div>
+                <div class="c2">预计2h</div>
+              </div>
+              <div class="r2 row">
+                <div class="c1">建设路雨水管网1#</div>
+                <div class="c2">管网逆流</div>
+                <div class="c2">李四</div>
+                <div class="c2">处理中</div>
+                <div class="c2">预计2h</div>
+              </div>
+              <div class="r2 row">
+                <div class="c1">建设路雨水管网1#</div>
+                <div class="c2">管网逆流</div>
+                <div class="c2">李四</div>
+                <div class="c2">处理中</div>
+                <div class="c2">预计2h</div>
+              </div> -->
             </div>
           </div>
         </div>
-        <div class="rightclosebutton">
-          <img src="./images/rightclose.png" alt="" />
-        </div>
+      </div>
+      <div class="rightclosebutton">
+        <img src="./images/rightclose.png" alt="" />
       </div>
     </div>
 
     <script>
       //点击收起两边菜单
       $(".leftclosebutton").click(function () {
-        var flag = $(this).parents(".leftpart").hasClass("leftclosed");
+        var flag = $(this).siblings(".leftpart").hasClass("leftclosed");
         if (flag) {
-          $(this).parents(".leftpart").removeClass("leftclosed");
+          $(this).siblings(".leftpart").removeClass("leftclosed");
+          $(this).removeClass("leftclosebuttonhidden");
         } else {
-          $(this).parents(".leftpart").addClass("leftclosed");
+          $(this).siblings(".leftpart").addClass("leftclosed");
+          $(this).addClass("leftclosebuttonhidden");
         }
       });
       $(".rightclosebutton").click(function () {
-        var flag = $(this).parents(".rightpart").hasClass("rightclosed");
+        var flag = $(this).siblings(".rightpart").hasClass("rightclosed");
         if (flag) {
-          $(this).parents(".rightpart").removeClass("rightclosed");
+          $(this).siblings(".rightpart").removeClass("rightclosed");
+          $(this).removeClass("rightclosebuttonhidden");
         } else {
-          $(this).parents(".rightpart").addClass("rightclosed");
+          $(this).siblings(".rightpart").addClass("rightclosed");
+          $(this).addClass("rightclosebuttonhidden");
         }
       });
     </script>

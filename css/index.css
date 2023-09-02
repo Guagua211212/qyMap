@@ -1,13 +1,24 @@
 @charset "UTF-8";
 html {
   font-family: PingFang SC;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
 
 .safe {
-  width: 1920px;
-  height: 1080px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: url(../images/back.png) no-repeat center top;
-  position: relative;
+  background-size: 100% 100%;
   overflow: hidden;
   margin: 0 auto;
 }
@@ -15,7 +26,8 @@ html {
 .safe .topperback {
   background: linear-gradient(180deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
   height: 320px;
-  width: 1920px;
+  width: 100%;
+  z-index: 1000000;
 }
 
 .safe .topperback .topbarcolor {
@@ -130,7 +142,7 @@ html {
 .safe .bottomback {
   background: linear-gradient(0deg, #112442 0%, rgba(17, 36, 66, 0) 100%);
   height: 320px;
-  width: 1920px;
+  width: 100%;
   position: absolute;
   bottom: 0;
   display: flex;
@@ -195,10 +207,33 @@ html {
   left: 0px;
   top: 73px;
   width: 400px;
-  height: 1007px;
+  height: calc(100vh - 73px);
+  overflow-y: auto;
+  overflow-x: hidden;
   background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
   backdrop-filter: blur(2.5px);
   transition: all 0.2s;
+}
+
+.safe .leftpart::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 5px;
+}
+
+.safe .leftpart::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px #239cdf;
+  background: #535353;
+}
+
+.safe .leftpart::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px #239cdf;
+  border-radius: 10px;
+  background: #ededed;
 }
 
 .safe .leftpart .leftpartcon1 {
@@ -373,10 +408,6 @@ html {
   background: #0457f6;
 }
 
-.safe .leftpart .leftpartcon3 {
-  height: 353px;
-}
-
 .safe .leftpart .leftpartcon3 .contitle {
   position: relative;
 }
@@ -483,10 +514,10 @@ html {
   margin-top: 11px;
 }
 
-.safe .leftpart .leftclosebutton {
+.safe .leftclosebutton {
   position: absolute;
   left: 400px;
-  top: 464px;
+  top: 49%;
   width: 14px;
   height: 80px;
   background: url(../images/leftpartbuttonback.png);
@@ -497,6 +528,7 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .safe .leftclosed {
@@ -505,7 +537,13 @@ html {
   transition: all 0.2s;
 }
 
-.safe .leftclosed .leftclosebutton img {
+.safe .leftclosebuttonhidden {
+  position: absolute;
+  left: 0px;
+  transition: all 0.2s;
+}
+
+.safe .leftclosebuttonhidden img {
   transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   /* IE 9 */
@@ -518,10 +556,33 @@ html {
   right: 0px;
   top: 73px;
   width: 400px;
-  height: 1007px;
-  background: linear-gradient(90deg, #071744 0%, rgba(7, 23, 68, 0) 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
+  height: calc(100vh - 73px);
+  overflow-y: auto;
+  overflow-x: hidden;
+  background: linear-gradient(90deg, rgba(7, 23, 68, 0) 0%, #071744 100%), linear-gradient(180deg, #061542 0%, rgba(0, 26, 102, 0.5) 100%);
   backdrop-filter: blur(2.5px);
   transition: all 0.2s;
+}
+
+.safe .rightpart::-webkit-scrollbar {
+  /*滚动条整体样式*/
+  width: 4px;
+  /*高宽分别对应横竖滚动条的尺寸*/
+  height: 5px;
+}
+
+.safe .rightpart::-webkit-scrollbar-thumb {
+  /*滚动条里面小方块*/
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 5px #239cdf;
+  background: #535353;
+}
+
+.safe .rightpart::-webkit-scrollbar-track {
+  /*滚动条里面轨道*/
+  -webkit-box-shadow: inset 0 0 5px #239cdf;
+  border-radius: 10px;
+  background: #ededed;
 }
 
 .safe .rightpart .rightpartcon1 {
@@ -641,6 +702,7 @@ html {
   align-content: center;
   justify-content: flex-start;
   align-items: center;
+  cursor: pointer;
 }
 
 .safe .rightpart .rightpartcon1 .condetail .itemstate .iteminfo {
@@ -696,6 +758,10 @@ html {
   color: #ff3d00;
 }
 
+.safe .rightpart .rightpartcon1 .condetail .itemstate:hover {
+  background: linear-gradient(89deg, #1c8dcb 1.1%, rgba(22, 67, 149, 0) 99.27%);
+}
+
 .safe .rightpart .rightpartcon2 {
   height: 280px;
 }
@@ -745,10 +811,6 @@ html {
   font-size: 20px;
   font-weight: 600;
   letter-spacing: 2px;
-}
-
-.safe .rightpart .rightpartcon3 {
-  height: 366px;
 }
 
 .safe .rightpart .rightpartcon3 .condetail .condets {
@@ -885,30 +947,6 @@ html {
 
 .safe .rightpart .rightpartcon3 .condetail .tablecon {
   margin-left: 12px;
-  height: 102px;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
-
-.safe .rightpart .rightpartcon3 .condetail .tablecon::-webkit-scrollbar {
-  /*滚动条整体样式*/
-  width: 4px;
-  /*高宽分别对应横竖滚动条的尺寸*/
-  height: 5px;
-}
-
-.safe .rightpart .rightpartcon3 .condetail .tablecon::-webkit-scrollbar-thumb {
-  /*滚动条里面小方块*/
-  border-radius: 10px;
-  -webkit-box-shadow: inset 0 0 5px #239cdf;
-  background: #535353;
-}
-
-.safe .rightpart .rightpartcon3 .condetail .tablecon::-webkit-scrollbar-track {
-  /*滚动条里面轨道*/
-  -webkit-box-shadow: inset 0 0 5px #239cdf;
-  border-radius: 10px;
-  background: #ededed;
 }
 
 .safe .rightpart .rightpartcon3 .condetail .tablecon .row {
@@ -942,10 +980,10 @@ html {
   padding-bottom: 5px;
 }
 
-.safe .rightpart .rightclosebutton {
+.safe .rightclosebutton {
   position: absolute;
   right: 400px;
-  top: 464px;
+  top: 49%;
   width: 14px;
   height: 80px;
   background: url(../images/rightbuttonback.png);
@@ -956,6 +994,7 @@ html {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  transition: all 0.2s;
 }
 
 .safe .rightclosed {
@@ -964,7 +1003,13 @@ html {
   transition: all 0.2s;
 }
 
-.safe .rightclosed .rightclosebutton img {
+.safe .rightclosebuttonhidden {
+  position: absolute;
+  right: 0;
+  transition: all 0.2s;
+}
+
+.safe .rightclosebuttonhidden img {
   transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   /* IE 9 */
@@ -1004,14 +1049,16 @@ html {
   border-radius: 12px;
   background: rgba(7, 23, 68, 0.6);
   position: absolute;
-  left: 702px;
+  left: 50%;
   top: 97px;
+  margin-left: -258px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-content: center;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .safe .centerpart .centercon {
